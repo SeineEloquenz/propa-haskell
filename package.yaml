@@ -1,0 +1,37 @@
+name:                propa-haskell
+version:             0.1.0.0
+github:              "SeineEloquenz/propa-haskell"
+license:             BSD3
+author:              "Alexander Linder"
+maintainer:          "alexander-linder@gmx.de"
+copyright:           "2020 Alexander Linder"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            App category here
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/SeineEloquenz/propa-haskell#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  propa-haskell-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - propa-haskell
