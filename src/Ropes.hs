@@ -19,4 +19,7 @@ ropeSplitAt i (Inner left len right)
   | otherwise = (left, right)
   
 ropeInsert :: Int -> Rope -> Rope -> Rope
-ropeInsert i a b = let (leftOfI, rightOfI) = ropeSplitAt i b in leftOfI `ropeConcat` a `ropeConcat` rightOfI 
+ropeInsert i a b = let (leftOfI, rightOfI) = ropeSplitAt i b in leftOfI `ropeConcat` a `ropeConcat` rightOfI
+
+ropeDelete :: Int -> Int -> Rope -> Rope
+ropeDelete i j rope = ropeConcat ((fst . ropeSplitAt i) rope) ((snd . ropeSplitAt j) rope)
