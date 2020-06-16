@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 797feac2b412f48a390eea1555cdc2dcae0eb4ec5a2bca42a1ed6f3b5d3542e6
+-- hash: 4287c0000e3dd44b3dc7cf1337652303982d7eefc2987e8b64b14753d8124808
 
 name:           propa-haskell
 version:        0.1.0.0
@@ -29,11 +29,14 @@ library
   exposed-modules:
       Arithmetik
       Ast
+      ChurchNumbers
       Collatz
       Fibs
       Merge
+      Polynom
       Ropes
       Sort
+      SS2019
   other-modules:
       Paths_propa_haskell
   hs-source-dirs:
